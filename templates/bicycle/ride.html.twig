@@ -1,0 +1,14 @@
+{# templates/bicycle/ride.html.twig #}
+<!DOCTYPE html>
+
+<h1>Bicycle Riding</h1>
+
+<form method="post" action="{{ path('bicycle_ride') }}">
+    {{ form_start(bicycleForm) }}
+
+    {{ form_end(bicycleForm) }}
+</form>
+
+<p>{{ startMessage }}</p>
+<p>Bicycle is {% if isRunning %}running{% else %}not running{% endif %}</p>
+<p>{{ stopMessage }}</p>
